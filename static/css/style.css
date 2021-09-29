@@ -168,7 +168,7 @@ section {
 --------------------*/
 
 header {
-    background-image: url(../images/police.png);
+    background-image: url(../images/crime.png);
     background-repeat: none;
     background-attachment: scroll;
     background-position: center center;
@@ -177,8 +177,7 @@ header {
     background-size: cover;
     -o-background-size: cover;
     text-align: center;
-    color: #fff;
-    opacity: 0.75;
+    color: white;
 }
 
 
@@ -349,7 +348,7 @@ figure {
 	position: relative;
     overflow: hidden;
     margin: 10px 1%;
-    background: #726FB9;
+    background: black;
     text-align: center;
     cursor: pointer;	
 }
@@ -708,8 +707,8 @@ font-size: 11px;
 
 .btn-xl {
     color: #fff;
-     background-color: #726FB9;
-    border-color: #726FB9;
+     background-color: #fec503;
+    border-color: #f6bf01;
     font-family: "Robot",sans-serif;
     text-transform: uppercase;
     font-weight: 700;
