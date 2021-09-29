@@ -1,0 +1,184 @@
+{% extends "base.html" %}
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}" />
+
+	<!-- Header -->
+	<header>
+		<div class="container">
+			<div class="slider-container">
+				<div class="intro-text">
+					<div class="intro-lead-in">Crime Data in New York City</div>
+					<div class="intro-heading">Violent Crimes  from 2006 to 2019</div>
+					<a href="#about" class="page-scroll btn btn-xl">Tell Me More</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section id="about" class="light-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<div class="section-title">
+						<h2>ABOUT</h2>
+						<p>The purpose of the project is to create an interactive view of crime in New York City. Users will be able to use the leaflet heatmap to understand hotspots for criminal activity and view segmented crime statistics via interactive charts. </p>
+					</div>
+				</div>
+			</div>
+				<!-- end about module -->
+		</div>
+		<!-- /.container -->
+	</section>
+	<section class="overlay-dark bg-img1 dark-bg short-section">
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-md-3 mb-sm-30">
+					<div class="counter-item">
+						<h2 data-count="59">13</h2>
+						<h6>years</h6>
+					</div>
+				</div>
+				<div class="col-md-3 mb-sm-30">
+					<div class="counter-item">
+						<h2 data-count="1054">##</h2>
+						<h6>Total Crimes</h6>
+					</div>
+				</div>
+				<div class="col-md-3 mb-sm-30">
+					<div class="counter-item">
+						<h2 data-count="34">##</h2>
+						<h6>Type of Crimes</h6>
+					</div>
+				</div>
+				<div class="col-md-3 mb-sm-30">
+					<div class="counter-item">
+						<h2 data-count="154">##</h2>
+						<h6>Neighborhoods</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="portfolio" class="light-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<div class="section-title">
+						<h2>Visualizations</h2>
+						<p>To picture the various crimes around New York City, we create different plots and charts to show the number of crimes per type. 
+                            Also, some charts show the demographics of the people that performed the crime.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<!-- start portfolio item -->
+				<div class="col-md-4">
+					<div class="ot-portfolio-item">
+						<figure class="effect-bubba">
+							<img src="static/images/demo/portfolio-1.jpg" alt="img02" class="img-responsive" />
+							<figcaption>
+								<h2>Dean & Letter</h2>
+								<p>Branding, Design</p>
+								<a href="#" data-toggle="modal" data-target="#Modal-1">View more</a>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+				<!-- start portfolio item -->
+				<div class="col-md-4">
+					<div class="ot-portfolio-item">
+						<figure class="effect-bubba">
+							<img src="static/images/demo/portfolio-2.jpg" alt="img02" class="img-responsive" />
+							<figcaption>
+								<h2>Startup Framework</h2>
+								<p>Branding, Web Design</p>
+								<a href="#" data-toggle="modal" data-target="#Modal-2">View more</a>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+				<!-- start portfolio item -->
+				<div class="col-md-4">
+					<div class="ot-portfolio-item">
+						<figure class="effect-bubba">
+							<img src="static/images/demo/portfolio-3.jpg" alt="img02" class="img-responsive" />
+							<figcaption>
+								<h2>Lamp & Velvet</h2>
+								<p>Branding, Web Design</p>
+								<a href="#" data-toggle="modal" data-target="#Modal-3">View more</a>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+			</div>
+			<div class="row">
+				<!-- start portfolio item -->
+				<div class="col-md-4">
+					<div class="ot-portfolio-item">
+						<figure class="effect-bubba">
+							<img src="static/images/demo/portfolio-4.jpg" alt="img02" class="img-responsive" />
+							<figcaption>
+								<h2>Smart Name</h2>
+								<p>Branding, Design</p>
+								<a href="#" data-toggle="modal" data-target="#Modal-4">View more</a>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+				<!-- start portfolio item -->
+				<div class="col-md-4">
+					<div class="ot-portfolio-item">
+						<figure class="effect-bubba">
+							<img src="static/images/demo/portfolio-5.jpg" alt="img02" class="img-responsive" />
+							<figcaption>
+								<h2>Fast People</h2>
+								<p>Branding, Web Design</p>
+								<a href="#" data-toggle="modal" data-target="#Modal-5">View more</a>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+				<!-- start portfolio item -->
+				<div class="col-md-4">
+					<div class="ot-portfolio-item">
+						<figure class="effect-bubba">
+							<img src="static/images/demo/portfolio-2.jpg" alt="img02" class="img-responsive" />
+							<figcaption>
+								<h2>Kites & Stars</h2>
+								<p>Branding, Web Design</p>
+								<a href="#" data-toggle="modal" data-target="#Modal-2">View more</a>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+			</div>
+		</div><!-- end container -->
+	</section>
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<div class="section-title">
+						<h2>Heatmap</h2>
+						<p>See the map below with markers for each crime in New York City</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<div class="map">
+						
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+<script src="{{url_for('static', filename='js/index.js')}}"></script>
+{% endblock %}
