@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}" />
+
+<!-- Header -->
+<header>
+	<div class="container">
+		<div class="slider-container">
+			<div class="intro-text">
+				<div class="intro-lead-in">Crime Data in New York City</div>
+				<div class="intro-heading">Violent Crimes from 2006 to 2019</div>
+				<a href="#about" class="page-scroll btn btn-xl">Tell Me More</a>
+			</div>
+		</div>
+	</div>
+</header>
+<section id="about" class="light-bg">
+	<div class="container">
+		<div class="col-lg-12 text-center">
+			<div class="section-title">
+				<h2>ABOUT</h2>
+				<p>The purpose of the project is to create an interactive view of crime in New York City. Users will
+					be able to use the leaflet heatmap to understand hotspots for criminal activity and view
+					segmented crime statistics via interactive charts. </p>
+			</div>
+		</div>
+		<!-- end about module -->
+	</div>
+	<!-- /.container -->
+</section>
+<section class="overlay-dark bg-img1 dark-bg short-section">
+	<div class="container text-center">
+		<div class="row">
+			<div class="col-md-3 mb-sm-30">
+				<div class="counter-item">
+					<h2 data-count="59">13</h2>
+					<h6>Years of Data</h6>
+				</div>
+			</div>
+			<div class="col-md-3 mb-sm-30">
+				<div class="counter-item">
+					<h2 data-count="1054">476,600</h2>
+					<h6>Total Crimes</h6>
+				</div>
+			</div>
+			<div class="col-md-3 mb-sm-30">
+				<div class="counter-item">
+					<h2 data-count="34">17</h2>
+					<h6>Different Type of Crimes</h6>
+				</div>
+			</div>
+			<div class="col-md-3 mb-sm-30">
+				<div class="counter-item">
+					<h2 data-count="154">5</h2>
+					<h6>Districs</h6>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section>
+	<div class="container">
+		<div class="col-lg-6 text-center">
+			<div class="section-title">
+				<h2>Heatmap</h2>
+				<p>See the map below with markers for each crime in New York City</p>
+				<div class="map">
+					<a href="/heatmap" class="page-scroll btn btn-xl">See More</a>
+				</div>
+			</div>
+		</div>
+			<div class="col-lg-6 text-center">
+				<div class="section-title">
+					<h2>Visualizations</h2>
+					<p>To picture the various crimes around New York City, we create different plots and charts to show the number of crimes per type. Also, some charts show the demographics of the people that performed the crime.</p>
+					<a href="/visualization" class="page-scroll btn btn-xl">See More</a>
+				</div>
+			</div>
+	</div>
+</section>
+
+
+<script src="{{url_for('static', filename='js/index.js')}}"></script>
+{% endblock %}
