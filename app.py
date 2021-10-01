@@ -5,10 +5,13 @@ from sqlalchemy import create_engine
 import numpy as np
 
 
-engine = create_engine('postgresql://postgres:Tablenature1@localhost:5432/Project_ETL')
+#engine = create_engine('postgresql://postgres:Tablenature1@localhost:5432/Project_ETL')
+
+engine = create_engine('sqlite:///nyc_crime.db')
 
 # reflect an existing database into a new model
 Base = automap_base()
+print(Base.classes.keys())
 # reflect the tables
 Base.prepare(engine, reflect=True)
 
