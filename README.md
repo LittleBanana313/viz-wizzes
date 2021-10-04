@@ -1,11 +1,11 @@
 # viz-wizzes
 A collaborative space to share victories and hurdles through Project 3!
-
+![Alt text](images/nyccrime.jpg?raw=true "Title")
 
 Datasets to be Used: 
 
 - [nyc_crime.csv](https://drive.google.com/file/d/1Mik3OSNpp6GkN0qS3vtoCqbo5wFa-M2U/view?usp=sharing)
-![Alt text](images/nyccrime.jpg?raw=true "Title")
+
 
 
 **Rough Breakdown of Tasks:** 
