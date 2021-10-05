@@ -8,38 +8,46 @@
       var samples = data.samples;
       var meta = data.metadata.filter(sampleobject => 
         sampleobject.id == sample);
-      var resultsarray = samples.filter(sampleobject =>
-        sampleobject.id == sample);
-      var result = resultsarray[0]
-  
-      console.log(data)
-    //   var labels = result.law_cat_cd;
-      var values = result[i];
+     var mapid = L.map("map", {
+  center: [40.7128, -74.0060],
+  zoom: 12
+});
 
-        
-      var xValue = ['Violations', 'Misdemeanors', 'Felonies'];
-      
-      var trace1 = {
-      x: xValue,
-      y: Value,
-      type: 'bar',
-      textposition: 'auto',
-      hoverinfo: 'none',
-      marker: {
-        color: 'rgb(158,202,225)',
-        opacity: 0.6,
-        line: {
-          color: 'rgb(8,48,107)',
-          width: 1.5
-        }
-      }
-    };
-  
-  var data = [trace1];
-  
-  var layout = {
-    title: 'Crimes in NY',
-    barmode: 'stack'
-  };
-  
-  Plotly.newPlot('myDiv', data, layout);
+
+// Adding the tile layer
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(mapid);
+
+// Connect crime database
+var data = 'http://127.0.0.1:5000/db_call'
+console.log(data)
+
+
+d3.json(data).then(function(response) {
+
+  // Create a new marker cluster group.
+  var markers = L.markerClusterGroup();
+
+  // Loop through the data.
+  for (var i = 0; i < response.length; i++) {
+
+    // Set the data location property to a variable.
+    var location1 = response[i].latitude;
+    var location2 = response[i].longitude;
+
+    // Check for the location property.
+    if (location) {
+
+      // Add a new marker to the cluster group, and bind a popup.
+      markers.addLayer(L.marker([location1, location2])
+        .bindPopup(response[i].ofns_desc));
+    }
+
+  }
+
+  // Add our marker cluster layer to the map.
+  mapid.addLayer(markers);
+
+});
+
