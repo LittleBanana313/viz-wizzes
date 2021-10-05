@@ -31,7 +31,7 @@ d3.json(data).then(function(response) {
 
       // Add a new marker to the cluster group, and bind a popup.
       markers.addLayer(L.marker([location1, location2])
-        .bindPopup(response[i].ofns_desc));
+        .bindPopup(response[i].ofns_desc+"<br> Perp Age: "+ response[i].age_group+"<br> Perp Gender: " + response[i].perp_sex + "<br> Perp Race: " + response[i].perp_race));
     }
 
   }
@@ -39,5 +39,36 @@ d3.json(data).then(function(response) {
   // Add our marker cluster layer to the map.
   mapid.addLayer(markers);
 
+
+  
 });
+
+// Use this link to get the GeoJSON data.
+var link = "https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.1/15-Mapping-Web/nyc.geojson";
+
+// The function that will determine the color of a neighborhood based on the borough that it belongs to
+function chooseColor(borough) {
+  if (borough == "Brooklyn") return "blue";
+  else if (borough == "Bronx") return "red";
+  else if (borough == "Manhattan") return "orange";
+  else if (borough == "Queens") return "brown";
+  else if (borough == "Staten Island") return "purple";
+  else return "black";
+}
+
+// Getting our GeoJSON data
+d3.json(link).then(function(data) {
+  // Creating a GeoJSON layer with the retrieved data
+  L.geoJson(data, {
+    style: function(feature) {
+      return {
+        color: "white",
+        fillColor: chooseColor(feature.properties.borough),
+        fillOpacity: 0.25,
+        weight: 1.5
+      };
+    }
+  }).addTo(mapid);
+});
+
 
