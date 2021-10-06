@@ -60,14 +60,14 @@ def dbCall():
     
     # Query all passengers
     results = session.query(nyc_crime.arrest_key, nyc_crime.arrest_date,nyc_crime.pd_desc, nyc_crime.ofns_desc, nyc_crime.law_cat_cd,
-    nyc_crime.age_group, nyc_crime.perp_sex).all()
+    nyc_crime.age_group, nyc_crime.perp_sex, nyc_crime.latitude, nyc_crime.longitude, nyc_crime.perp_race, nyc_crime.district).all()
 
   
 
 
     session.close()
     nyc_crime_data = []
-    for arrest_key, arrest_date, pd_desc, ofns_desc, law_cat_cd, age_group, perp_sex in results:
+    for arrest_key, arrest_date, pd_desc, ofns_desc, law_cat_cd, age_group, perp_sex, latitude, longitude, perp_race, district in results:
         n = {
             "arrest_key" : arrest_key,
             "arrest_date": arrest_date,
@@ -75,7 +75,11 @@ def dbCall():
             "ofns_desc": ofns_desc,
             "law_cat_cd": law_cat_cd,
             "age_group": age_group,
-            "perp_sex": perp_sex
+            "perp_sex": perp_sex,
+            "latitude": latitude,
+            "longitude": longitude,
+            "perp_race": perp_race,
+            "borough": district
 
         }
 
