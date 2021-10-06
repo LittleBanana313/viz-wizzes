@@ -2,9 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
-visualization.html
-visualization.js
-visualization.css
+
 # C extensions
 *.so
 
