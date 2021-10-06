@@ -3,7 +3,7 @@ $(document).ready( function(){
   var size = $("#colorme").css("fontSize");
   $("#colorme").hover(
           function(){
-              $(this).css("fontSize", "100px");
+              $(this).css("fontSize", "50px");
           }, 
           function(){
               $(this).css("fontSize", size);
