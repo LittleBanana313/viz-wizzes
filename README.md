@@ -1,6 +1,6 @@
 # viz-wizzes
 A collaborative space to share victories and hurdles through Project 3!
-![Alt text](images/nyccrime.jpg?raw=true "Title")
+![Alt text](images/crime.png?raw=true "Title")
 
 Datasets to be Used: 
 
